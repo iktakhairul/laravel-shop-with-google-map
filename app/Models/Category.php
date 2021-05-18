@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Shop;
-
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
