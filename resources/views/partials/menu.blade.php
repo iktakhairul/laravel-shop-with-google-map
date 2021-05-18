@@ -8,7 +8,7 @@
                         <i class="fa-fw fas fa-users nav-icon">
 
                         </i>
-                        {{ trans('cruds.userManagement.title') }}
+                        {{ trans('User Management') }}
                     </a>
                     <ul class="nav-dropdown-items">
                         @can('permission_access')
@@ -17,7 +17,7 @@
                                     <i class="fa-fw fas fa-unlock-alt nav-icon">
 
                                     </i>
-                                    {{ trans('cruds.permission.title') }}
+                                    {{ trans('Permission') }}
                                 </a>
                             </li>
                         @endcan
@@ -27,7 +27,7 @@
                                     <i class="fa-fw fas fa-briefcase nav-icon">
 
                                     </i>
-                                    {{ trans('cruds.role.title') }}
+                                    {{ trans('Role') }}
                                 </a>
                             </li>
                         @endcan
@@ -37,7 +37,7 @@
                                     <i class="fa-fw fas fa-user nav-icon">
 
                                     </i>
-                                    {{ trans('cruds.user.title') }}
+                                    {{ trans('User') }}
                                 </a>
                             </li>
                         @endcan
@@ -50,7 +50,7 @@
                         <i class="fa-fw fas fa-tags nav-icon">
 
                         </i>
-                        {{ trans('cruds.category.title') }}
+                        {{ trans('Category') }}
                     </a>
                 </li>
             @endcan
@@ -60,7 +60,7 @@
                         <i class="fa-fw fas fa-shopping-basket nav-icon">
 
                         </i>
-                        {{ trans('cruds.shop.title') }}
+                        {{ trans('Shop') }}
                     </a>
                 </li>
             @endcan
@@ -69,7 +69,7 @@
                     <i class="nav-icon fas fa-fw fa-sign-out-alt">
 
                     </i>
-                    {{ trans('global.logout') }}
+                    {{ trans('Logout') }}
                 </a>
             </li>
         </ul>
