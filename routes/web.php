@@ -21,34 +21,38 @@ Route::get('/home', function () {
     return redirect()->route('admin.shops.index');
 });
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('shop/{shop}', 'HomeController@show')->name('shop');
+Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home');
+Route::get('shop/{shop}', 'App\Http\Controllers\HomeController@show')->name('shop');
 
 Auth::routes();
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], function () {
-    Route::get('/', 'AdminsHomeController@index')->name('home');
+//    Route::get('/', 'App\Http\Controllers\AdminsHomeController@index')->name('home');
     // Permissions
-    Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
-    Route::resource('permissions', 'PermissionsController');
+    Route::delete('permissions/destroy', 'App\Http\Controllers\PermissionsController@massDestroy')->name('permissions.massDestroy');
+    Route::resource('permissions', 'App\Http\Controllers\PermissionsController');
 
     // Roles
-    Route::delete('roles/destroy', 'RolesController@massDestroy')->name('roles.massDestroy');
-    Route::resource('roles', 'RolesController');
+    Route::delete('roles/destroy', 'App\Http\Controllers\RolesController@massDestroy')->name('roles.massDestroy');
+    Route::resource('roles', 'App\Http\Controllers\RolesController');
 
     // Users
-    Route::delete('users/destroy', 'UsersController@massDestroy')->name('users.massDestroy');
-    Route::resource('users', 'UsersController');
+    Route::delete('users/destroy', 'App\Http\Controllers\UsersController@massDestroy')->name('users.massDestroy');
+    Route::resource('users', 'App\Http\Controllers\UsersController');
 
     // Categories
-    Route::delete('categories/destroy', 'CategoriesController@massDestroy')->name('categories.massDestroy');
-    Route::resource('categories', 'CategoriesController');
+    Route::delete('categories/destroy', 'App\Http\Controllers\CategoriesController@massDestroy')->name('categories.massDestroy');
+    Route::resource('categories', 'App\Http\Controllers\CategoriesController');
 
     // Shops
-    Route::delete('shops/destroy', 'ShopsController@massDestroy')->name('shops.massDestroy');
-    Route::post('shops/media', 'ShopsController@storeMedia')->name('shops.storeMedia');
-    Route::resource('shops', 'ShopsController');
+    Route::delete('shops/destroy', 'App\Http\Controllers\ShopsController@massDestroy')->name('shops.massDestroy');
+    Route::post('shops/media', 'App\Http\Controllers\ShopsController@storeMedia')->name('shops.storeMedia');
+    Route::resource('shops', 'App\Http\Controllers\ShopsController');
 });
+
+Auth::routes();
+
+Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Auth::routes();
 
