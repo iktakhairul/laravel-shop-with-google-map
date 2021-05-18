@@ -90,7 +90,7 @@
                                 @endcan
 
                                 @can('shop_delete')
-                                    <form action="{{ route('admin.shops.destroy', $shop->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
+                                    <form action="{{ route('admin.shops.destroy', $shop->id) }}" method="POST" onsubmit="return confirm('{{ trans('Are you sure?') }}');" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('Delete') }}">
@@ -115,7 +115,7 @@
         $(function () {
             let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
             @can('shop_delete')
-            let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
+            let deleteButtonTrans = '{{ trans('Datatables Delete') }}'
             let deleteButton = {
                 text: deleteButtonTrans,
                 url: "{{ route('admin.shops.massDestroy') }}",
@@ -126,12 +126,12 @@
                     });
 
                     if (ids.length === 0) {
-                        alert('{{ trans('global.datatables.zero_selected') }}')
+                        alert('{{ trans('Datatables not selected!') }}')
 
                         return
                     }
 
-                    if (confirm('{{ trans('global.areYouSure') }}')) {
+                    if (confirm('{{ trans('Are you sure?') }}')) {
                         $.ajax({
                             headers: {'x-csrf-token': _token},
                             method: 'POST',

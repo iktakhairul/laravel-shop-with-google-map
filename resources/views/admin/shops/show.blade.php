@@ -3,21 +3,21 @@
 
     <div class="card">
         <div class="card-header">
-            {{ trans('global.show') }} {{ trans('cruds.shop.title') }}
+            {{ trans('Show') }} {{ trans('Shop') }}
         </div>
 
         <div class="card-body">
             <div class="form-group">
                 <div class="form-group">
                     <a class="btn btn-default" href="{{ route('admin.shops.index') }}">
-                        {{ trans('global.back_to_list') }}
+                        {{ trans('Back to list') }}
                     </a>
                 </div>
                 <table class="table table-bordered table-striped">
                     <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.shop.fields.id') }}
+                            {{ trans('Td') }}
                         </th>
                         <td>
                             {{ $shop->id }}
@@ -25,7 +25,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.shop.fields.name') }}
+                            {{ trans('Name') }}
                         </th>
                         <td>
                             {{ $shop->name }}
@@ -33,7 +33,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.shop.fields.categories') }}
+                            {{ trans('Categories') }}
                         </th>
                         <td>
                             @foreach($shop->categories as $key => $categories)
@@ -43,7 +43,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.shop.fields.description') }}
+                            {{ trans('Description') }}
                         </th>
                         <td>
                             {{ $shop->description }}
@@ -51,7 +51,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.shop.fields.photos') }}
+                            {{ trans('Photos') }}
                         </th>
                         <td>
                             @foreach($shop->photos as $key => $media)
@@ -63,7 +63,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.shop.fields.address') }}
+                            {{ trans('Address') }}
                         </th>
                         <td>
                             {{ $shop->address }}
@@ -71,7 +71,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.shop.fields.active') }}
+                            {{ trans('Active') }}
                         </th>
                         <td>
                             <input type="checkbox" disabled="disabled" {{ $shop->active ? 'checked' : '' }}>
@@ -79,7 +79,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.shop.fields.working_hours') }}
+                            {{ trans('Working hours') }}
                         </th>
                         <td>
                             @if($shop->days)
@@ -96,7 +96,7 @@
                 </table>
                 <div class="form-group">
                     <a class="btn btn-default" href="{{ route('admin.shops.index') }}">
-                        {{ trans('global.back_to_list') }}
+                        {{ trans('Back to list') }}
                     </a>
                 </div>
             </div>
