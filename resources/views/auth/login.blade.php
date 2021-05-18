@@ -4,9 +4,9 @@
         <div class="col-md-6">
             <div class="card mx-4">
                 <div class="card-body p-4">
-                    <h1>{{ trans('panel.site_title') }}</h1>
+                    <h1>{{ trans('Iktakhairul') }}</h1>
 
-                    <p class="text-muted">{{ trans('global.login') }}</p>
+                    <p class="text-muted">{{ trans('Login') }}</p>
 
                     @if(session('status'))
                         <div class="alert alert-success" role="alert">
@@ -24,7 +24,7 @@
                             </span>
                             </div>
 
-                            <input id="email" name="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" required autocomplete="email" autofocus placeholder="{{ trans('global.login_email') }}" value="{{ old('email', null) }}">
+                            <input id="email" name="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" required autocomplete="email" autofocus placeholder="{{ trans('email') }}" value="{{ old('email', null) }}">
 
                             @if($errors->has('email'))
                                 <div class="invalid-feedback">
@@ -38,7 +38,7 @@
                                 <span class="input-group-text"><i class="fa fa-lock"></i></span>
                             </div>
 
-                            <input id="password" name="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" required placeholder="{{ trans('global.login_password') }}">
+                            <input id="password" name="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" required placeholder="{{ trans('password') }}">
 
                             @if($errors->has('password'))
                                 <div class="invalid-feedback">
@@ -51,7 +51,7 @@
                             <div class="form-check checkbox">
                                 <input class="form-check-input" name="remember" type="checkbox" id="remember" style="vertical-align: middle;" />
                                 <label class="form-check-label" for="remember" style="vertical-align: middle;">
-                                    {{ trans('global.remember_me') }}
+                                    {{ trans('Remember me') }}
                                 </label>
                             </div>
                         </div>
@@ -65,11 +65,11 @@
                             <div class="col-6 text-right">
                                 @if(Route::has('password.request'))
                                     <a class="btn btn-link px-0" href="{{ route('password.request') }}">
-                                        {{ trans('global.forgot_password') }}
+                                        {{ trans('Forgot_password') }}
                                     </a><br>
                                 @endif
                                 <a class="btn btn-link px-0" href="{{ route('register') }}">
-                                    {{ trans('global.register') }}
+                                    {{ trans('Register') }}
                                 </a>
                             </div>
                         </div>
