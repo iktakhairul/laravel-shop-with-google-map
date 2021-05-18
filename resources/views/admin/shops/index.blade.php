@@ -4,14 +4,14 @@
         <div style="margin-bottom: 10px;" class="row">
             <div class="col-lg-12">
                 <a class="btn btn-success" href="{{ route("admin.shops.create") }}">
-                    {{ trans('global.add') }} {{ trans('cruds.shop.title_singular') }}
+                    {{ trans('Add') }} {{ trans('New Shop') }}
                 </a>
             </div>
         </div>
     @endcan
     <div class="card">
         <div class="card-header">
-            {{ trans('cruds.shop.title_singular') }} {{ trans('global.list') }}
+            {{ trans('Shop Title') }}
         </div>
 
         <div class="card-body">
@@ -20,28 +20,28 @@
                     <thead>
                     <tr>
                         <th width="10">
-
+                            {{ trans('Select') }}
                         </th>
                         <th>
-                            {{ trans('cruds.shop.fields.id') }}
+                            {{ trans('Id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.shop.fields.name') }}
+                            {{ trans('Name') }}
                         </th>
                         <th>
-                            {{ trans('cruds.shop.fields.categories') }}
+                            {{ trans('Categories') }}
                         </th>
                         <th>
-                            {{ trans('cruds.shop.fields.photos') }}
+                            {{ trans('Photos') }}
                         </th>
                         <th>
-                            {{ trans('cruds.shop.fields.address') }}
+                            {{ trans('Address') }}
                         </th>
                         <th>
-                            {{ trans('cruds.shop.fields.active') }}
+                            {{ trans('Active') }}
                         </th>
                         <th>
-                            &nbsp;
+                            &nbsp;{{ trans('Actions') }}
                         </th>
                     </tr>
                     </thead>
@@ -79,13 +79,13 @@
                             <td>
                                 @can('shop_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.shops.show', $shop->id) }}">
-                                        {{ trans('global.view') }}
+                                        {{ trans('View') }}
                                     </a>
                                 @endcan
 
                                 @can('shop_edit')
                                     <a class="btn btn-xs btn-info" href="{{ route('admin.shops.edit', $shop->id) }}">
-                                        {{ trans('global.edit') }}
+                                        {{ trans('Edit') }}
                                     </a>
                                 @endcan
 
@@ -93,7 +93,7 @@
                                     <form action="{{ route('admin.shops.destroy', $shop->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
+                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('Delete') }}">
                                     </form>
                                 @endcan
 

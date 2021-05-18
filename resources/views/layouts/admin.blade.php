@@ -110,12 +110,12 @@
 <script src="{{ asset('js/main.js') }}"></script>
 <script>
     $(function() {
-        let copyButtonTrans = '{{ trans('global.datatables.copy') }}'
-        let csvButtonTrans = '{{ trans('global.datatables.csv') }}'
-        let excelButtonTrans = '{{ trans('global.datatables.excel') }}'
-        let pdfButtonTrans = '{{ trans('global.datatables.pdf') }}'
-        let printButtonTrans = '{{ trans('global.datatables.print') }}'
-        let colvisButtonTrans = '{{ trans('global.datatables.colvis') }}'
+        let copyButtonTrans = '{{ trans('Datatables.copy') }}'
+        let csvButtonTrans = '{{ trans('Datatables.csv') }}'
+        let excelButtonTrans = '{{ trans('Datatables.excel') }}'
+        let pdfButtonTrans = '{{ trans('Datatables.pdf') }}'
+        let printButtonTrans = '{{ trans('Datatables.print') }}'
+{{--        let colvisButtonTrans = '{{ trans('Datatables.colvis') }}'--}}
 
         let languages = {
             'en': 'https://cdn.datatables.net/plug-ins/1.10.19/i18n/English.json'
