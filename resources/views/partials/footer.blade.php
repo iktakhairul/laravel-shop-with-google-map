@@ -22,6 +22,7 @@
         }
         .logo-footer {
             margin-bottom: 40px;
+            margin-left: 50px;
         }
         footer {
             color: grey;
@@ -113,14 +114,14 @@
                 <div class="row">
                     <div class="col-md-6 ">
                         <div class="logo-part">
-                            <img src="https://1.bp.blogspot.com/-ZugNTvFIsJs/YCt9rxi0rBI/AAAAAAAArqY/rQp9X8tmdzsEk6xCT2Rqvw6rWsQ5tDiAwCLcBGAsYHQ/s823/output-onlinepngtools.png" class="w-50 logo-footer" >
-                            <p class="footer-ap">32/1, Road: 3, Shyamoli, Dhaka 1207,Bangladesh</p>
+                            <img src="assets/images/iktakhairul.png" class="w-50 logo-footer">
+                            <p class="footer-ap">32/B, Sukhrabad, Dhanmondi, Dhaka 1209, Bangladesh</p>
                             <p class="footer-ap" id="about-reformed-tech">Thinking about updating your Web Application & Software to expand your business and attract ideal customers. Contact ReformedTech & take Control of our business.</p>
                         </div>
                     </div>
                     <div class="col-md-6 px-4">
-                        <h6> About Reformed Tech</h6>
-                        <p class="footer-ap">ReformedTech Supports your Web Application & Software to help improve your Client Satisfaction in a strategically programmed way.</p>
+                        <h6> About Iktakhariul</h6>
+                        <p class="footer-ap">Iktakhariul supports your Web Application & Software to help improve your Client Satisfaction in a strategically programmed way.</p>
                         <a href="#" class="btn-footer"> More Info </a><br>
                         <a href="#" class="btn-footer"> Contact Us</a>
                     </div>
@@ -163,7 +164,7 @@
                             <input type="text"  placeholder="search here...." name="search">
                             <input type="button" value="Go" >
                         </form>
-                        <p class="footer-ap">ReformedTech Technical Specialists work with your vision, draw the roadmap and implement your expectation above and beyond.</p>
+                        <p class="footer-ap">Iktakhairul is a technical Specialists work with your vision, draw the roadmap and implement your expectation above and beyond.</p>
                         <p class="footer-ap">&copy; 2021 iktakhairul@reformedtech.org</p>
                     </div>
                 </div>
