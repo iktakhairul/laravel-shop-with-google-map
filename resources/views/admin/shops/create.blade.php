@@ -3,27 +3,26 @@
 
     <div class="card">
         <div class="card-header">
-            {{ trans('global.create') }} {{ trans('cruds.shop.title_singular') }}
+            {{ trans('Create') }} {{ trans('New Shop') }}
         </div>
 
         <div class="card-body">
             <form method="POST" action="{{ route("admin.shops.store") }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label class="required" for="name">{{ trans('cruds.shop.fields.name') }}</label>
+                    <label class="required" for="name">{{ trans('Name') }}</label>
                     <input class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" type="text" name="name" id="name" value="{{ old('name', '') }}" required>
                     @if($errors->has('name'))
                         <div class="invalid-feedback">
                             {{ $errors->first('name') }}
                         </div>
                     @endif
-                    <span class="help-block">{{ trans('cruds.shop.fields.name_helper') }}</span>
                 </div>
                 <div class="form-group">
-                    <label for="categories">{{ trans('cruds.shop.fields.categories') }}</label>
+                    <label for="categories">{{ trans('Categories') }}</label>
                     <div style="padding-bottom: 4px">
-                        <span class="btn btn-info btn-xs select-all" style="border-radius: 0">{{ trans('global.select_all') }}</span>
-                        <span class="btn btn-info btn-xs deselect-all" style="border-radius: 0">{{ trans('global.deselect_all') }}</span>
+                        <span class="btn btn-info btn-xs select-all" style="border-radius: 0">{{ trans('Select all') }}</span>
+                        <span class="btn btn-info btn-xs deselect-all" style="border-radius: 0">{{ trans('Deselect all') }}</span>
                     </div>
                     <select class="form-control select2 {{ $errors->has('categories') ? 'is-invalid' : '' }}" name="categories[]" id="categories" multiple>
                         @foreach($categories as $id => $categories)
@@ -35,20 +34,18 @@
                             {{ $errors->first('categories') }}
                         </div>
                     @endif
-                    <span class="help-block">{{ trans('cruds.shop.fields.categories_helper') }}</span>
                 </div>
                 <div class="form-group">
-                    <label for="description">{{ trans('cruds.shop.fields.description') }}</label>
+                    <label for="description">{{ trans('Description') }}</label>
                     <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" id="description">{{ old('description') }}</textarea>
                     @if($errors->has('description'))
                         <div class="invalid-feedback">
                             {{ $errors->first('description') }}
                         </div>
                     @endif
-                    <span class="help-block">{{ trans('cruds.shop.fields.description_helper') }}</span>
                 </div>
                 <div class="form-group">
-                    <label for="photos">{{ trans('cruds.shop.fields.photos') }}</label>
+                    <label for="photos">{{ trans('Photos') }}</label>
                     <div class="needsclick dropzone {{ $errors->has('photos') ? 'is-invalid' : '' }}" id="photos-dropzone">
                     </div>
                     @if($errors->has('photos'))
@@ -56,10 +53,9 @@
                             {{ $errors->first('photos') }}
                         </div>
                     @endif
-                    <span class="help-block">{{ trans('cruds.shop.fields.photos_helper') }}</span>
                 </div>
                 <div class="form-group">
-                    <label for="address">{{ trans('cruds.shop.fields.address') }}</label>
+                    <label for="address">{{ trans('Address') }}</label>
                     <input class="form-control map-input {{ $errors->has('address') ? 'is-invalid' : '' }}" type="text" name="address" id="address" value="{{ old('address') }}">
                     <input type="hidden" name="latitude" id="address-latitude" value="{{ old('latitude') ?? '0' }}" />
                     <input type="hidden" name="longitude" id="address-longitude" value="{{ old('longitude') ?? '0' }}" />
@@ -68,7 +64,6 @@
                             {{ $errors->first('address') }}
                         </div>
                     @endif
-                    <span class="help-block">{{ trans('cruds.shop.fields.address_helper') }}</span>
                 </div>
                 <div id="address-map-container" class="mb-2" style="width:100%;height:400px; ">
                     <div style="width: 100%; height: 100%" id="address-map"></div>
@@ -76,16 +71,15 @@
                 <div class="form-group">
                     <div class="form-check {{ $errors->has('active') ? 'is-invalid' : '' }}">
                         <input class="form-check-input" type="checkbox" name="active" id="active" value="1" {{ old('active', 0) == 1 ? 'checked' : '' }}>
-                        <label class="form-check-label" for="active">{{ trans('cruds.shop.fields.active') }}</label>
+                        <label class="form-check-label" for="active">{{ trans('Active') }}</label>
                     </div>
                     @if($errors->has('active'))
                         <div class="invalid-feedback">
                             {{ $errors->first('active') }}
                         </div>
                     @endif
-                    <span class="help-block">{{ trans('cruds.shop.fields.active_helper') }}</span>
                 </div>
-                <label>{{ trans('cruds.shop.fields.working_hours') }}</label>
+                <label>{{ trans('Working Hours') }}</label>
                 @foreach($days as $day)
                     <div class="form-inline">
                         <label class="my-1 mr-2">{{ ucfirst($day->name) }}: from</label>
@@ -125,7 +119,7 @@
 
                 <div class="form-group">
                     <button class="btn btn-danger" type="submit">
-                        {{ trans('global.save') }}
+                        {{ trans('Save') }}
                     </button>
                 </div>
             </form>
