@@ -121,8 +121,8 @@
                     <div class="col-md-6 px-4">
                         <h6> About Reformed Tech</h6>
                         <p class="footer-ap">ReformedTech Supports your Web Application & Software to help improve your Client Satisfaction in a strategically programmed way.</p>
-                        <a href="About" class="btn-footer"> More Info </a><br>
-                        <a href="Contact" class="btn-footer"> Contact Us</a>
+                        <a href="#" class="btn-footer"> More Info </a><br>
+                        <a href="#" class="btn-footer"> Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -133,12 +133,12 @@
                         <div class="row ">
                             <div class="col-md-6">
                                 <ul>
-                                    <li> <a class="footer-ap" href="/"> Home</a> </li>
-                                    <li> <a class="footer-ap" href="About"> About</a> </li>
+                                    <li> <a class="footer-ap" href="#"> Home</a> </li>
+                                    <li> <a class="footer-ap" href="#"> About</a> </li>
                                     <li> <a class="footer-ap" href="#"> Service</a> </li>
                                     <li> <a class="footer-ap" href="#"> Team</a> </li>
                                     <li> <a class="footer-ap" href="#"> Help</a> </li>
-                                    <li> <a class="footer-ap" href="Contact"> Contact</a> </li>
+                                    <li> <a class="footer-ap" href="#"> Contact</a> </li>
                                 </ul>
                             </div>
                             <div class="col-md-6 px-4">
