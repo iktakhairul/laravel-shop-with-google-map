@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             RoleUserTableSeeder::class,
             DaysTableSeeder::class,
             CategoriesTableSeeder::class,
-//            ShopsTableSeeder::class,
+            ShopsTableSeeder::class,
             DayShopTableSeeder::class,
         ]);
     }
