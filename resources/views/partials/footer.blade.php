@@ -114,7 +114,7 @@
                 <div class="row">
                     <div class="col-md-6 ">
                         <div class="logo-part">
-                            <img src="assets/images/iktakhairul.png" class="w-50 logo-footer">
+                            <img src="https://1.bp.blogspot.com/-oTvNrnfF3wY/YKTgzjXee2I/AAAAAAAArwo/ouiJ8_DMnnsA5DjxWE8pjE4GKhkjgQHUwCLcBGAsYHQ/s498/iktakhairul%2B%25281%2529.png" class="w-50 logo-footer">
                             <p class="footer-ap">32/B, Sukhrabad, Dhanmondi, Dhaka 1209, Bangladesh</p>
                             <p class="footer-ap" id="about-reformed-tech">Thinking about updating your Web Application & Software to expand your business and attract ideal customers. Contact ReformedTech & take Control of our business.</p>
                         </div>
