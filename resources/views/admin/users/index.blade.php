@@ -4,14 +4,14 @@
         <div style="margin-bottom: 10px;" class="row">
             <div class="col-lg-12">
                 <a class="btn btn-success" href="{{ route("admin.users.create") }}">
-                    {{ trans('global.add') }} {{ trans('cruds.user.title_singular') }}
+                    {{ trans('Add') }} {{ trans('New User') }}
                 </a>
             </div>
         </div>
     @endcan
     <div class="card">
         <div class="card-header">
-            {{ trans('cruds.user.title_singular') }} {{ trans('global.list') }}
+            {{ trans('User List') }}
         </div>
 
         <div class="card-body">
@@ -20,25 +20,25 @@
                     <thead>
                     <tr>
                         <th width="10">
-
+                            {{ trans('Select') }}
                         </th>
                         <th>
-                            {{ trans('cruds.user.fields.id') }}
+                            {{ trans('Id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.user.fields.name') }}
+                            {{ trans('Name') }}
                         </th>
                         <th>
-                            {{ trans('cruds.user.fields.email') }}
+                            {{ trans('Email') }}
                         </th>
                         <th>
-                            {{ trans('cruds.user.fields.email_verified_at') }}
+                            {{ trans('Verified at') }}
                         </th>
                         <th>
-                            {{ trans('cruds.user.fields.roles') }}
+                            {{ trans('Roles') }}
                         </th>
                         <th>
-                            &nbsp;
+                            {{ trans('Actions') }}
                         </th>
                     </tr>
                     </thead>
@@ -68,21 +68,21 @@
                             <td>
                                 @can('user_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.users.show', $user->id) }}">
-                                        {{ trans('global.view') }}
+                                        {{ trans('View') }}
                                     </a>
                                 @endcan
 
                                 @can('user_edit')
                                     <a class="btn btn-xs btn-info" href="{{ route('admin.users.edit', $user->id) }}">
-                                        {{ trans('global.edit') }}
+                                        {{ trans('Edit') }}
                                     </a>
                                 @endcan
 
                                 @can('user_delete')
-                                    <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
+                                    <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('{{ trans('Are you sure?') }}');" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
+                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('Delete') }}">
                                     </form>
                                 @endcan
 
@@ -115,12 +115,12 @@
                     });
 
                     if (ids.length === 0) {
-                        alert('{{ trans('global.datatables.zero_selected') }}')
+                        alert('{{ trans('Datatable not selected') }}')
 
                         return
                     }
 
-                    if (confirm('{{ trans('global.areYouSure') }}')) {
+                    if (confirm('{{ trans('Are you sure?') }}')) {
                         $.ajax({
                             headers: {'x-csrf-token': _token},
                             method: 'POST',
