@@ -4,14 +4,14 @@
         <div style="margin-bottom: 10px;" class="row">
             <div class="col-lg-12">
                 <a class="btn btn-success" href="{{ route("admin.permissions.create") }}">
-                    {{ trans('global.add') }} {{ trans('cruds.permission.title_singular') }}
+                    {{ trans('Add') }} {{ trans('New Permission') }}
                 </a>
             </div>
         </div>
     @endcan
     <div class="card">
         <div class="card-header">
-            {{ trans('cruds.permission.title_singular') }} {{ trans('global.list') }}
+            {{ trans('Permission Title') }}
         </div>
 
         <div class="card-body">
@@ -20,16 +20,16 @@
                     <thead>
                     <tr>
                         <th width="10">
-
+                            {{ trans('Select') }}
                         </th>
                         <th>
-                            {{ trans('cruds.permission.fields.id') }}
+                            {{ trans('Id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.permission.fields.title') }}
+                            {{ trans('Title') }}
                         </th>
                         <th>
-                            &nbsp;
+                            {{ trans('Actions') }}
                         </th>
                     </tr>
                     </thead>
@@ -48,21 +48,21 @@
                             <td>
                                 @can('permission_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.permissions.show', $permission->id) }}">
-                                        {{ trans('global.view') }}
+                                        {{ trans('View') }}
                                     </a>
                                 @endcan
 
                                 @can('permission_edit')
                                     <a class="btn btn-xs btn-info" href="{{ route('admin.permissions.edit', $permission->id) }}">
-                                        {{ trans('global.edit') }}
+                                        {{ trans('Edit') }}
                                     </a>
                                 @endcan
 
                                 @can('permission_delete')
-                                    <form action="{{ route('admin.permissions.destroy', $permission->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
+                                    <form action="{{ route('admin.permissions.destroy', $permission->id) }}" method="POST" onsubmit="return confirm('{{ trans('Are you sure?') }}');" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
+                                        <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('Delete') }}">
                                     </form>
                                 @endcan
 
@@ -84,7 +84,7 @@
         $(function () {
             let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
             @can('permission_delete')
-            let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
+            let deleteButtonTrans = '{{ trans('Datatables delete') }}'
             let deleteButton = {
                 text: deleteButtonTrans,
                 url: "{{ route('admin.permissions.massDestroy') }}",
@@ -95,12 +95,12 @@
                     });
 
                     if (ids.length === 0) {
-                        alert('{{ trans('global.datatables.zero_selected') }}')
+                        alert('{{ trans('Datatable not selected!') }}')
 
                         return
                     }
 
-                    if (confirm('{{ trans('global.areYouSure') }}')) {
+                    if (confirm('{{ trans('Are you sure?') }}')) {
                         $.ajax({
                             headers: {'x-csrf-token': _token},
                             method: 'POST',
