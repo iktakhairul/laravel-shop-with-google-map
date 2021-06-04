@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d948e3bbd9b18b77b00b23c9127f412",
+    "content-hash": "a741b3df665f8bc4071c6e4e2e8c3118",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1019,6 +1019,76 @@
                 }
             ],
             "time": "2021-04-26T11:24:25+00:00"
+        },
+        {
+            "name": "genealabs/laravel-maps",
+            "version": "0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GeneaLabs/laravel-maps.git",
+                "reference": "e56c810d387a45eccda0fa6c9edcbc66deb87e30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GeneaLabs/laravel-maps/zipball/e56c810d387a45eccda0fa6c9edcbc66deb87e30",
+                "reference": "e56c810d387a45eccda0fa6c9edcbc66deb87e30",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "orchestra/testbench-browser-kit": "^6.0",
+                "orchestra/testbench-dusk": "^6.0",
+                "php-coveralls/php-coveralls": "*",
+                "phpmd/phpmd": "^2.7",
+                "phpunit/phpunit": "^9.0",
+                "sebastian/phpcpd": "^5.0",
+                "symfony/thanks": "^1.2"
+            },
+            "suggest": {
+                "geocoder-php/GeocoderLaravel": "If you need to geocode addresses and don't already have marker coordinates, use this package. It provides geocoding functionality optimized for Laravel."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GeneaLabs\\LaravelMaps\\Providers\\Service"
+                    ],
+                    "aliases": {
+                        "Map": "GeneaLabs\\LaravelMaps\\Facades\\Map"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GeneaLabs\\LaravelMaps\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Bronner",
+                    "email": "mike@genealabs.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Eay - peasy map integration for Laravel.",
+            "keywords": [
+                "biostall",
+                "googlemaps",
+                "laravel",
+                "phpgmaps"
+            ],
+            "support": {
+                "issues": "https://github.com/GeneaLabs/laravel-maps/issues",
+                "source": "https://github.com/GeneaLabs/laravel-maps/tree/0.8.0"
+            },
+            "time": "2020-10-01T14:02:23+00:00"
         },
         {
             "name": "graham-campbell/result-type",
