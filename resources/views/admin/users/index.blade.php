@@ -43,7 +43,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($users as $key => $user)
+                    @foreach($users as $user)
                         <tr data-entry-id="{{ $user->id }}">
                             <td>
 
@@ -85,16 +85,12 @@
                                         <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('Delete') }}">
                                     </form>
                                 @endcan
-
                             </td>
-
                         </tr>
                     @endforeach
                     </tbody>
                 </table>
             </div>
-
-
         </div>
     </div>
 @endsection
